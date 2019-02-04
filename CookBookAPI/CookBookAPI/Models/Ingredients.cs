@@ -11,7 +11,7 @@ namespace CookBookAPI.Models
         [MaxLength]
         public string Name { get; set; }
 
-        // Navigation
+        // Navigation Properties
         public ICollection<RecipieIngredients> RecipeID { get; set; }
     }
 }
