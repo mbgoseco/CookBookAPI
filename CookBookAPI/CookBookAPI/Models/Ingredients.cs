@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CookBookAPI.Models
@@ -10,8 +11,7 @@ namespace CookBookAPI.Models
         [MaxLength]
         public string Name { get; set; }
 
-        //Navigation Properties
-        public int RecipeIngredients { get; set; }
-        
+        // Navigation Properties
+        public ICollection<RecipieIngredients> RecipeID { get; set; }
     }
 }
