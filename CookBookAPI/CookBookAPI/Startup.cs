@@ -21,6 +21,7 @@ namespace CookBookAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
             services.AddDbContext<CookBookDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 
