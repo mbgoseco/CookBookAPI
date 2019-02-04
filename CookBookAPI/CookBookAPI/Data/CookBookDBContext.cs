@@ -1,11 +1,15 @@
 ﻿using CookBookAPI.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace CookBookAPI.Data
 {
-    public class CookBookDBContext : DbContext
+    public class CookBookDbContext : DbContext
     {
-        public CookBookDBContext(DbContextOptions<CookBookDBContext> options) : base(options)
+        public CookBookDbContext(DbContextOptions<CookBookDbContext> options) : base (options)
         {
 
 
@@ -17,7 +21,8 @@ namespace CookBookAPI.Data
         }
 
         DbSet<RecipieIngredients> RecipieIngredients { get; set; }
-
         DbSet<Ingredients> Ingredients { get; set; }
+        DbSet<Recipes> Recipes { get; set; }
+        DbSet<Instructions> Instructions { get; set; }
     }
 }
