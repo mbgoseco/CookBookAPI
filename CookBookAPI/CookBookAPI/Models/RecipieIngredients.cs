@@ -5,7 +5,9 @@ namespace CookBookAPI.Models
 {
     public class RecipieIngredients
     {
+        [Required]
         public int RecipieID { get; set; }
+        [Required]
         public int IngredientsID { get; set; }
         [Column(TypeName = "varchar(max)")]
         [MaxLength]
