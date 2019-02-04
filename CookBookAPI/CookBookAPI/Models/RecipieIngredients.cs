@@ -13,5 +13,8 @@ namespace CookBookAPI.Models
         [MaxLength]
         public string Quantity { get; set; }
 
+        // Navigation
+        public Recipes Recipe { get; set; }
+        public Ingredients Ingredient { get; set; }
     }
 }
