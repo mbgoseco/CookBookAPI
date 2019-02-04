@@ -4,7 +4,7 @@ namespace CookBookAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class RecipieIngredientsController : ControllerBase
+    public class IngredientsController : ControllerBase
     {
     }
 }
