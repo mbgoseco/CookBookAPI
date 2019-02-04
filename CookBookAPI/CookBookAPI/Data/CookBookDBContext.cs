@@ -11,6 +11,13 @@ namespace CookBookAPI.Data
 
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<RecipieIngredients>().HasKey(hr => new { hr.RecipieID, hr.IngredientsID});
+        }
+
         DbSet<RecipieIngredients> RecipieIngredients { get; set; }
+
+        DbSet<Ingredients> Ingredients { get; set; }
     }
 }
