@@ -11,7 +11,7 @@ namespace CookBookAPI.Models
         public string Name { get; set; }
 
         // Navigation
-        public Instructions InstructionID { get; set; }
-        public RecipieInredients IngredientID { get; set; }
+        public ICollection<Instructions> InstructionID { get; set; }
+        public ICollection<RecipieIngredients> IngredientID { get; set; }
     }
 }
