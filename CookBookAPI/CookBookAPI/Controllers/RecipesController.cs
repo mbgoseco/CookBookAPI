@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CookBookAPI.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,6 +12,19 @@ namespace CookBookAPI.Controllers
     [ApiController]
     public class RecipesController : ControllerBase
     {
+        private readonly CookBookDbContext _context;
 
+        public RecipesController(CookBookDbContext context)
+        {
+            _context = context;
+        }
+
+        // GET
+
+        // POST
+
+        // PUT
+
+        // DELETE
     }
 }
